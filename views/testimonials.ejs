@@ -1,0 +1,48 @@
+<!-- ARQUIVO RESPONSÁVEL PELA ESTRUTURA DA PÁGINA http://localhost:3000/testimonials -->
+
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <title><%= title %></title>
+    <%- include('imports'); -%>
+  </head>
+
+  <body>
+      <%- include('navbar'); -%>
+
+
+
+      <div class ="container">
+        <div class ="row">
+
+            <div class="row">
+                <div class="col-md-12">
+                    <h1 id="id_testemunhos">Testemunhos</h1>
+                    <a href="/admin/testimonials" class=" btn btn btn-success">Administração de Testemunhos</a>
+                </div>
+              </div>  
+          
+
+          <% horse.forEach((horse)=>{%>
+
+                <div class="card">
+                    <div class="card-header">
+                      Testemunho do Sr. <%= horse.name %>
+                    </div>
+                    <div class="card-body">
+                      <blockquote class="blockquote mb-0">
+                        <p class= "class_teste"><%= horse.testemunho %></p>
+                        <footer class="blockquote-footer"><%= horse.name %>, <%= horse.title %> da <%= horse.company %> </footer>
+                      </blockquote>
+                    </div>
+                  </div>
+                
+
+          <% }); %>      
+
+        </div>
+      </div>
+    
+  </body>
+</html>

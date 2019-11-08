@@ -1,0 +1,34 @@
+[
+    {   
+        "item":1,
+        "id": 1,
+        "name": "Produto_01",
+        "image": "product1.jpg",
+        "price": "R$100,00",
+        "description": "Descrição do Produto 1 - Que processo has seccaram avultava occultos estranho meu."
+    },
+    {   
+        "item":2,
+        "id": 2,
+        "name": "Produto_02",
+        "image": "product2.jpg",
+        "price": "R$200,00",
+        "description": "Descrição do Produto 2 - Descaroado aba mazzantini interrogal."
+    },
+    {
+        "item":3,
+        "id": 3,
+        "name": "Produto_03",
+        "image": "product3.jpg",
+        "price": "R$300,00",
+        "description": "Descrição do Produto 3 - So ve as crescsddendo lembranca lh deixassem."
+    },
+    {
+        "item":4,
+        "id": 4,
+        "name": "Produto_4",
+        "image": "product_Image-1572392778231.jpg",
+        "price": "R$400,00",
+        "description": "Descrição do produto 4 - So ve as crescsddendo lembranca lh deixassem."
+    }
+]

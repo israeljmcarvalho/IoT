@@ -1,0 +1,42 @@
+<!-- ARQUIVO RESPONSÁVEL PELA ESTRUTURA DA PÁGINA http://localhost:3000/notices -->
+
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <title><%= title %></title>
+    <%- include('imports'); -%>
+  </head>
+
+  <body>
+      <%- include('navbar'); -%>
+
+      <div class ="container">
+        <div class ="row">
+
+          <% dog.forEach((dog)=>{%>
+
+                <div class="card mb-3" style="max-width: 700px;">
+                    <div class="row no-gutters">
+                    <div class="col-md-4">
+                        <img src="/images/<%= dog.image %>" class="card-img">
+                        <a href="/notice/<%= dog.id%>" class="btn btn-primary">Ler Mais</a>
+                    </div>
+                    <div class="col-md-8">
+                        <div class="card-body">
+                          <h5 class="card-title"><%= dog.name %></h5>
+                          <p class="notice_card-text"><%= dog.description%></p>
+                          <p class="notice_update"><small class="text-muted">Last updated 3 mins ago</small></p>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+
+
+          <% }); %>      
+
+        </div>
+      </div>
+    
+  </body>
+</html>

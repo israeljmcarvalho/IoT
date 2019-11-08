@@ -1,0 +1,55 @@
+<!-- ARQUIVO RESPONSÁVEL PELA ESTRUTURA DA PÁGINA http://localhost:3000/testimonials -->
+
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <title><%= title %></title>
+    <%- include('imports'); -%>
+  </head>
+
+  <body>
+      <%- include('navbar'); -%>
+
+
+
+      <div class ="container">
+
+        <div class ="row">
+
+            <div class="row">
+              <div class="col-md-12">
+                  <h1 id="id_projetos">Projetos</h1>
+                  <a href="/admin/projects" class=" btn btn btn-success">Administração de Projetos</a>
+              </div>
+            </div>  
+          
+
+          <% lion.forEach((lion)=>{%>
+
+            <div class="card mb-3">
+              <div class="row no-gutters">
+                <div class="col-md-4">
+                    <img src="/images/<%= lion.image %>" class="card-img">
+                    <a href="/project/<%= lion.id%>" class="btn btn-primary">Saiba mais</a>
+                </div>
+                <div class="col-md-8">
+                    <div class="card-body">
+                      <h5 class="card-title"><%= lion.name %></h5>
+                      <p class="project_card-text"><%= lion.description %></p>
+                      <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                    </div>
+                </div>
+              </div>
+            </div>
+
+              
+
+          <% }); %>      
+
+        </div>
+
+      </div>
+    
+  </body>
+</html>

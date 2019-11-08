@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Produtos</title>
+  <%- include('../../imports'); -%>
+</head>
+<body>
+  <%- include('../../navbar'); -%>
+
+<div class="container">
+  
+    <div class="row">
+      <h1 id="id_adm_page">Cadastro de Produtos</h1>
+    </div>  
+
+    <div class="row mb-2">
+      <a href="/admin/products/create" class=" btn btn btn-success">Novo Produto</a>
+    </div>  
+
+    <table class="table">
+      <thead class="thead-dark">
+        <tr>  
+          <th scope="col">Código</th>
+          <th scope="col">Nome</th>
+          <th scope="col">Preço</th>
+        </tr>
+      </thead>
+      <tbody>
+        <%fish.forEach((fish)=>{ %>
+          <tr>
+             <td><%=fish.id%></td>
+             <td><%=fish.name%></td>
+             <td><%=fish.price%></td>
+           </tr> 
+        <%}); %>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+</body>
+</html>

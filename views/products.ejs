@@ -1,0 +1,82 @@
+<!-- ARQUIVO RESPONSÁVEL PELA ESTRUTURA DA PÁGINA http://localhost:3000/products -->
+
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <title><%= title %></title>
+    <%- include('imports'); -%>
+  </head>
+
+  <body>
+      <%- include('navbar'); -%>
+
+
+    <div id= "idteste" class="card mb-3">
+      <div class ="container">
+
+        <div class ="row">
+
+            <div class="row">
+              <div class="col-md-12">
+                  <br>
+                  <h1 id="id_produtos">Produtos</h1>
+                  <br>
+              </div>
+            </div>  
+          
+
+          <% fish.forEach((fish)=>{%>
+
+            <div class="card mb-3">
+              <div class="row no-gutters">
+
+                <div class="container">
+                    <div class="row">
+                      <div class="col-sm">
+                        <img src="/images/<%= fish.image %>" class="card-img">
+                      </div>
+                      <div class="col-sm">
+                        <br>
+                        <h5 id="nome_produto" class="card-title"><%= fish.name %></h5>
+                        <p class="product_card-text"><%= fish.description %></p>
+                        <h5 id="preco_produto"class="card-title"><%= fish.price %></h5>
+                      </div>
+                      <div class="col-sm">
+                          <br>
+                          <br>
+                          <br>
+                        <a id ="botao_finaliza_carrinho" onclick="teste()" href="" class=" btn btn btn-success">Adicionar ao Carrinho</a>
+                      </div>
+                    </div>
+                  </div>
+
+              </div>
+            </div>
+
+
+
+              
+
+          <% }); %>      
+
+        </div>
+        <br>
+        <br>
+        
+        <br>
+      </div>
+      <div id="botao_finaliza_carrinho" class="m-4"> <!--class="m-4" da margin automaticamente... Outras opções é mb (margin botton) / mt (margin top)-->
+        <a id="botao_finalizar" href="http://austintecnologia.com.br/estamos-em-construcao/" class=" btn btn btn-success">Finalizar e ir para o Carrinho de Compras</a>
+      </div>
+    </div>
+  </body>
+
+  <script>
+        function teste() {
+          var elemento = document.getElementById("botao_finaliza_carrinho");
+          alert("Em construção");
+        }
+  </script>
+
+</html>

@@ -1,0 +1,44 @@
+<!--  ARQUIVO RESPONSÁVEL PELA ESTRUTURA DA PÁGINA http://localhost:3000/posts -->
+
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <title><%= title %></title>
+    <%- include('imports'); -%>
+  </head>
+
+  <body>
+      <%- include('navbar'); -%>
+
+      <div class ="container">
+        <div class ="row">
+
+          <% mouse.forEach((mouse)=>{%>
+
+                <div class="card mb-3" style="max-width: 700px;">
+                  <a href="/post/<%= mouse.id%>">
+                      <div class="row no-gutters">
+                      <div class="col-md-4">
+                          <img src="/images/<%= mouse.image %>" class="card-img">
+                          
+                      </div>
+                      <div class="col-md-8">
+                          <div class="card-body">
+                          <h5 class="card-title"><%= mouse.title %></h5>
+                          <p class="post_card-text"><%= mouse.description %></p>
+                          <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                          </div>
+                      </div>
+                      </div>
+                  </a>
+                </div>
+
+
+          <% }); %>      
+
+        </div>
+      </div>
+    
+  </body>
+</html>

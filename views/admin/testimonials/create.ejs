@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Testemunhos</title>
+  <%- include('../../imports'); -%>
+</head>
+<body>
+  <%- include('../../navbar'); -%>
+
+    <div class="container">
+
+        <div class="row">
+                <div class="col-md-12">
+                    <h1 id="id_create_page">Novo Testemunho</h1>
+                </div>
+        </div>
+         
+        <div class="row">
+
+            <div class="col-md-12"> <!-- Parametrizado para ocupar 12 unidades de largura -->
+
+                <form action= "create" method= "POST">
+
+                    <div class="form-group">  <!-- No Bootstrap chamamos de "form-group" as subareas... neste exemplo a subaria é composta por 1 label, e imput e um "minilabel" para ser utilizado como texto de ajuda  -->
+                        <labels for="testimonial_Testemunho">Testemunho</label>  <!-- Este campo FOR serve para linkar o label com o imput (perceber que o texto to FOR é o mesmo do ID do Imput) para quando a pessoa clicar no Label o cursor do mouse ir direto para o imput -->
+                        <textarea name="testimonialTestemunho" type="text" class="form-control" id="testimonial_Testemunho"  placeholder="Escreva aqui seu testemunho"> </textarea>
+                                <!-- o parâmetro NAME acima refere-se ao nome dado para linkar com o controler para buscar o título do testimonial. Pode ser dado
+                                 qualquer nome, neste caso foi utilizado a string "title". Este "name" não é ID do campo, ele vai dizer para o servidor como é que
+                                 veio cada informação -->
+                    </div> 
+
+                    <div class="form-group"> 
+                        <label for="testimonial_Name">Nome</label>
+                        <input name="testimonialName" type="text" class="form-control" id="testimonial_Name" placeholder="Digite aqui seu nome"> 
+                    </div>
+
+                    <div class="form-group">  
+                        <label for="testimonial_Title">Função</label> 
+                        <input  name="testimonialTitle" type="text" class="form-control" id="testimonial_Title" placeholder="Digite aqui seu cargo"> 
+                    </div>
+
+                    <div class="form-group">  
+                        <label for="testimonial_Company">Empresa</label> 
+                        <input name="testimonialCompany" type="text" class="form-control" id="testimonial_Company" placeholder="Digite aqui sua empresa"> 
+                    </div>
+
+                    <button type="submit" class="btn btn-primary">Salvar</button>
+                </form>
+          </div>
+        </div>  
+    </div>
+
+</body>
+</html>

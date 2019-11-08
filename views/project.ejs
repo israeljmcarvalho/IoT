@@ -1,0 +1,26 @@
+<!-- ARQUIVO RESPONSÁVEL PELA ESTRUTURA DA PÁGINA http://localhost:3000/project/1 -->
+
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <title><%= title %></title>
+    <%- include('imports'); -%>
+  </head>
+
+  <body>
+      <%- include('navbar'); -%>
+
+      <div class ="container">
+        <div class ="row">
+            <div class="post-detail">
+                <h1 class="h1_project"> <%= project.name %></h1>
+                <img class="imagens_project" src= "/images/<%= project.image %>" />
+                <h5 class="h5_project"> <%= project.subject %></h5>
+                <p> <%= project.description%></p>
+            </div>
+        </div>
+      </div>
+    
+  </body>
+</html>

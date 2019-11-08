@@ -1,0 +1,26 @@
+<!-- ARQUIVO RESPONSÁVEL PELA ESTRUTURA DA PÁGINA http://localhost:3000/product/1 -->
+
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <title><%= title %></title>
+    <%- include('imports'); -%>
+  </head>
+
+  <body>
+      <%- include('navbar'); -%>
+
+      <div class ="container">
+        <div class ="row">
+            <div class="post-detail">
+                <h1 class="h1_product"> <%= product.name %></h1>
+                <img width="50%" class="imagens_product" src= "/images/<%= product.image %>" />
+                <h5 class="h5_product"> <%= product.price %></h5>
+                <p> <%= product.description%></p>
+            </div>
+        </div>
+      </div>
+    
+  </body>
+</html>

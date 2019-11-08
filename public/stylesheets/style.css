@@ -1,0 +1,124 @@
+.h1_post{
+    color: red;
+    text-align: center;
+    size: 15px;
+} 
+
+.imagens_project {
+      width: 600px;
+      height: 360;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+}
+
+.imagens_post {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.h1_project{
+    color: rgb(159, 243, 4);
+    text-align: center;
+    size: 15px;
+    padding-top: 20px;
+}
+
+.h5_project{
+    size: 12px;
+    padding-top: 20px;
+}
+
+.h1_post{
+    color: rgb(221, 191, 18);
+    text-align: center;
+    size: 15px;
+    padding-top: 20px;
+}
+
+.p_post{
+    padding-top: 20px;
+}
+
+.post_card-text{
+    color:rgb(69, 5, 112);
+}
+
+
+.teste{
+    margin: 0 auto;
+    display: block;
+}
+
+.project_card-text{
+    color:rgb(118, 39, 170);
+}
+
+
+.h5_notice{
+    color:rgb(97, 87, 89);
+    size: 10px;
+}
+
+.h1_notice{
+    color: green;
+    text-align: center;
+    size: 15px;
+    padding-top: 20px;
+}
+
+.imagens_notice {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.notice_card-text{
+    color:rgb(6, 177, 15);
+}
+
+.card{
+    padding: 5px;
+    margin: 15px;
+}
+
+.class_teste{
+    color: blue;
+    text-align: center;
+    font-size: 16px;
+}
+
+
+.blockquote-footer{
+    color: red;
+    font-size: 13px;
+}
+
+
+#id_adm_page{
+    color: red;
+    margin: 20px;
+    font-size: 25px;
+}
+
+#idteste{
+    margin-left: 100px;
+    margin-right: 100px;
+}
+
+#nome_produto{
+    color: blue;
+}
+
+#preco_produto{
+    color: red;
+}
+
+#botao_finalizar{
+    width: 100%;
+}
+
+#botao_finaliza_carrinho{
+    align-self: center;
+}

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Testemunhos</title>
+  <%- include('../../imports'); -%>
+</head>
+<body>
+  <%- include('../../navbar'); -%>
+
+
+
+<div class="container">
+    <div class="row">
+      <h1 id="id_adm_page">Administração de Testemunhos</h1>
+
+    </div>  
+
+    <div class="row mb-2">
+      <a href="/admin/testimonials/create" class=" btn btn btn-success">Novo Testemunho</a>
+    </div>  
+
+    <table class="table">
+      <thead class="thead-dark">
+        <tr>
+          <th scope="col">Código</th>
+          <th scope="col">Nome</th>
+          <th scope="col">Ocupação</th>
+          <th scope="col">Empresa</th>
+        </tr>
+      </thead>
+      <tbody>
+        <%horse.forEach((horse)=>{ %>
+          <tr>
+             <td><%=horse.id%></td>
+             <td><%=horse.name%></td>
+             <td><%=horse.title%></td>
+             <td><%=horse.company%></td>
+           </tr> 
+        <%}); %>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+</body>
+</html>

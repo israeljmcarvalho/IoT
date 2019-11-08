@@ -1,0 +1,58 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Alterna navegação">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav mr-auto">
+
+        <li class="nav-item active">
+           <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item active">
+           <a class="nav-link" href="/posts">Relação Posts <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item active">
+            <a class="nav-link" href="/projects">Projetos <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item active">
+          <a class="nav-link" href="/notices">Notícias <span class="sr-only">(current)</span></a>
+      </li>        
+        <li class="nav-item active">
+          <a class="nav-link" href="/testimonials">Testemunhos <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item active">
+          <a class="nav-link" href="/products">Produtos <span class="sr-only">(current)</span></a>
+        </li>
+
+        <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Administração
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+              <a class="dropdown-item" href="/admin/projects">Projects</a>
+              <a class="dropdown-item" href="/admin/testimonials">Testimonials</a>
+              <a class="dropdown-item" href="/admin/products">Produtos</a>
+            </div>
+            
+        </li>
+                    
+      </ul>
+
+      <% if (locals.loggedUser) { %>
+        <ul class="navbar-nav">
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  <%= locals.loggedUser.email %>
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                  <a class="dropdown-item" href="/auth/logout">Sair</a>
+                </div>
+            </li>
+        </ul>
+      <% } %> 
+
+      
+    </div>
+  
+</nav>
